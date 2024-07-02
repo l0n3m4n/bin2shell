@@ -5,7 +5,7 @@
 </div>
 
 
-# bin2shell
+# 🐚 bin2shell
 
 ## 📜 Description
 A small script that generate shellcode from various languages. 

@@ -5,7 +5,7 @@ A small script that generate shellcode from various languages.
 
 📚 Table of Contents
 - 📜 [Description](#-description)
-- ⚙️ [Usage](#-usage)
+- ⚙️ [Help](#-help)
 - 📌 [Author](#-author)
 - 👨🏾‍⚖️ [License](#-license)
 

@@ -1,3 +1,9 @@
+<div align="right">
+  <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fl0n3m4n%2Fbin2shell">
+    <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fl0n3m4n%2Fbin2shell&label=Visitors&countColor=%2337d67a" />
+  </a>
+</div>
+
 # 🐚 bin2shell
 
 ## 📜 Description
@@ -36,7 +42,7 @@ Example usage: python3 bin2shell.py -bin shellcode.bin -c shellcode_c.txt
 ```
 ## Usage
 ```bash
-$ python3 bin2shell.py -s shellcode.bin -c shellcode_c.txt
+$ python3 bin2shell.py -bin shellcode.bin -c shellcode_c.txt
 
   ,--.   ,--.         ,---.        ,--.            ,--.,--. 
   |  |-. `--',--,--, '.-.  \ ,---. |  ,---.  ,---. |  ||  | 

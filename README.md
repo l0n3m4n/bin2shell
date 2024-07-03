@@ -20,24 +20,19 @@ python3 bin2shell.py -h
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
       Author: @l0n3m4n / Shellcode Generator / v1.2
 
-usage: bin2shell.py [-h] -s shellcode.bin [-c c.txt] [-cpp cpp.txt] [-cs cs.txt] [-asm asm.txt]
+usage: bin2shell.py [-h] -bin BIN [-c C] [-cpp CPP] [-cs CS] [-asm ASM]
 
 Shellcode Generator (C,C#,CPP,ASM)
 
 options:
-  -h, --help            show this help message and exit
-  -s shellcode.bin, --shellcode shellcode.bin
-                        Input shellcode binary file
-  -c c.txt, --c_output c.txt
-                        Output file for C formatted shellcode
-  -cpp cpp.txt, --cpp_output cpp.txt
-                        Output file for C++ formatted shellcode
-  -cs cs.txt, --cs_output cs.txt
-                        Output file for C# formatted shellcode
-  -asm asm.txt, --asm_output asm.txt
-                        Output file for Assembly (NASM) formatted shellcode
+  -h, --help  show this help message and exit
+  -bin BIN    Input shellcode binary file
+  -c C        Output file for C formatted shellcode
+  -cpp CPP    Output file for C++ formatted shellcode
+  -cs CS      Output file for C# formatted shellcode
+  -asm ASM    Output file for Assembly (NASM) formatted shellcode
 
-Example usage: python3 bin2shell.py -s shellcode.bin -c shellcode_c.txt
+Example usage: python3 bin2shell.py -bin shellcode.bin -c shellcode_c.txt
 ```
 ## Usage
 ```bash

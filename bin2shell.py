@@ -77,7 +77,7 @@ def main():
 {Color.RESET}"""
 
     parser = argparse.ArgumentParser(description="Shellcode Generator (C,C#,CPP,ASM)",
-                                    epilog='Example usage: python3 shellcode_formatter.py -s shellcode.bin -c shellcode_c.txt')
+                                    epilog='Example usage: python3 bin2shell.py -s shellcode.bin -c shellcode_c.txt')
     print(banner)
     parser.add_argument('-s', '--shellcode', metavar='shellcode.bin', required=True, help='Input shellcode binary file')
     parser.add_argument('-c', '--c_output', metavar='c.txt', help='Output file for C formatted shellcode')

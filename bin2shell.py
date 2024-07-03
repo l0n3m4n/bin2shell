@@ -1,10 +1,10 @@
 import argparse
 
 class Color:
-    GREEN = '\033[92m'
-    RED = '\033[91m'
-    YELLOW = '\033[93m'
-    CYAN = '\033[96m'
+    BRIGHT_RED = '\033[31;1m'
+    BRIGHT_GREEN = '\033[32;1m'
+    BRIGHT_YELLOW = '\033[33;1m'
+    PINK = '\033[95m'
     RESET = '\033[0m'
 
 def format_shellcode_c(input_file):
@@ -67,23 +67,23 @@ def format_shellcode_asm(input_file):
     return formatted_shellcode
 
 def main():
-    banner = f"""{Color.GREEN}
+    banner = f"""{Color.BRIGHT_GREEN}
   ,--.   ,--.         ,---.        ,--.            ,--.,--. 
   |  |-. `--',--,--, '.-.  \ ,---. |  ,---.  ,---. |  ||  | 
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-      Author: @l0n3m4n / Shellcode Generator / v1.2
+      {Color.RESET}{Color.PINK}Author: @l0n3m4n / Shellcode Generator / v1.2
 {Color.RESET}"""
 
     parser = argparse.ArgumentParser(description="Shellcode Generator (C,C#,CPP,ASM)",
-                                    epilog='Example usage: python3 bin2shell.py -s shellcode.bin -c shellcode_c.txt')
+                                    epilog='Example usage: python3 bin2shell.py -bin shellcode.bin -c shellcode_c.txt')
     print(banner)
-    parser.add_argument('-s', '--shellcode', metavar='shellcode.bin', required=True, help='Input shellcode binary file')
-    parser.add_argument('-c', '--c_output', metavar='c.txt', help='Output file for C formatted shellcode')
-    parser.add_argument('-cpp', '--cpp_output', metavar='cpp.txt', help='Output file for C++ formatted shellcode')
-    parser.add_argument('-cs', '--cs_output', metavar='cs.txt', help='Output file for C# formatted shellcode')
-    parser.add_argument('-asm', '--asm_output', metavar='asm.txt', help='Output file for Assembly (NASM) formatted shellcode')
+    parser.add_argument('-bin', metavar="shellcode.bin", required=True, help='Input shellcode binary file')
+    parser.add_argument('-c', help='Output file for C formatted shellcode')
+    parser.add_argument('-cpp', help='Output file for C++ formatted shellcode')
+    parser.add_argument('-cs', help='Output file for C# formatted shellcode')
+    parser.add_argument('-asm', help='Output file for Assembly (NASM) formatted shellcode')
 
     args = parser.parse_args()
 
@@ -92,7 +92,7 @@ def main():
     if args.c_output:
         # Format shellcode for C
         c_code = format_shellcode_c(input_file)
-        print(f"\n{Color.GREEN}Formatted C Shellcode:\n")
+        print(f"\n{Color.BRIGHT_GREEN}Formatted C Shellcode:\n")
         print(c_code)
 
         with open(args.c_output, 'w') as f:

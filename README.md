@@ -1,7 +1,7 @@
 # 🐚 bin2shell
 
 ## 📜 Description
-A small script that generate shellcode from various languages. 
+A small script that generate shellcode from various low level languages. 
 
 📚 Table of Contents
 - 📜 [Description](#-description)
@@ -37,7 +37,7 @@ options:
   -asm asm.txt, --asm_output asm.txt
                         Output file for Assembly (NASM) formatted shellcode
 
-Example usage: python3 shellcode_formatter.py -s shellcode.bin -c shellcode_c.txt
+Example usage: python3 bin2shell.py -s shellcode.bin -c shellcode_c.txt
 ```
 ## Usage
 ```bash

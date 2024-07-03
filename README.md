@@ -12,7 +12,7 @@ A small script that generate shellcode from various low level languages.
 ## ⚙️ Help
 ```bash
 python3 bin2shell.py -h
-
+  
   ,--.   ,--.         ,---.        ,--.            ,--.,--. 
   |  |-. `--',--,--, '.-.  \ ,---. |  ,---.  ,---. |  ||  | 
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 

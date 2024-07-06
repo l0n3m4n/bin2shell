@@ -91,7 +91,7 @@ def main():
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-       {Color.RESET}{Color.PINK}Author: @l0n3m4n / Shellcode Generator / v1.2 {Color.RESET}"""
+       {Color.RESET}{Color.PINK}Author: @l0n3m4n / Shellcode Generator / v1.2 {Color.RESET}\n"""
 
     parser = argparse.ArgumentParser(description="Binary payload to shellcode generator (C,C#,CPP,ASM)",
                                     epilog='Example usage: python3 bin2shell.py -bin payload.bin -c shellcode_c.txt')

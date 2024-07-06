@@ -1,6 +1,7 @@
 #!/bin/python3 
 
 import argparse
+import struct
 
 class Color:
     BRIGHT_RED = '\033[31;1m'
@@ -71,6 +72,18 @@ def format_shellcode_asm(input_file):
     
     return formatted_shellcode
 
+def format_shellcode_bof(input_file): 
+    with open(input_file, 'rb') as f:
+        payload = f.read()
+    
+    # Define the random magic header and prepare the payload
+    magic_hdr = 0xe9e63f1c 
+    payload += struct.pack("<L", magic_hdr)
+    payload += struct.pack("<L", len(payload))  
+    
+    return payload  
+    
+
 def main():
     banner = f"""{Color.BRIGHT_GREEN}
   ,--.   ,--.         ,---.        ,--.            ,--.,--. 
@@ -84,10 +97,11 @@ def main():
                                     epilog='Example usage: python3 bin2shell.py -bin payload.bin -c shellcode_c.txt')
     print(banner)
     parser.add_argument('-bin', required=True, help='Input shellcode binary file')
-    parser.add_argument('-c', help='Output file for C formatted shellcode')
-    parser.add_argument('-cpp', help='Output file for C++ formatted shellcode')
-    parser.add_argument('-cs', help='Output file for C# formatted shellcode')
-    parser.add_argument('-asm', help='Output file for Assembly (NASM) formatted shellcode')
+    parser.add_argument('-c', help='Convert binary into C raw shellcode')
+    parser.add_argument('-cpp', help='Convert binary into C++ raw shellcode')
+    parser.add_argument('-cs', help='Convert binary into C# raw shellcode')
+    parser.add_argument('-asm', help='Convert binary into (NASM) raw shellcode')
+    parser.add_argument('-bof', help='Convert cobalt strike BOF into raw shellcode')
 
     args = parser.parse_args()
 
@@ -132,6 +146,16 @@ def main():
         with open(args.asm, 'w') as f:
             f.write(asm_code)
         print(f"\n{Color.CYAN}Saved{Color.RESET} {Color.GREEN}ASM formatted shellcode to {args.asm}{Color.RESET}")
+    
+    if args.bof:
+        # Format shellcode for BOF Loader (e.g., Cobaltstrike)
+        bof_code = format_shellcode_bof(input_file) 
+        print(f"\n{Color.CYAN}Formatted{Color.RESET} {Color.GREEN}BOF Loader Shellcode:\n{Color.RESET}")
+        print(Color.CYAN + bof_code.hex() + Color.RESET) 
+        
+        with open(args.bof, 'wb') as f: 
+            f.write(bof_code)
+        print(f"\n{Color.CYAN}Saved{Color.RESET} {Color.GREEN}BOF Loader formatted shellcode to {args.bof}{Color.RESET}")
 
 if __name__ == "__main__":
     main()

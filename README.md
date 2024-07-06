@@ -26,7 +26,7 @@ python3 bin2shell.py -h
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
       Author: @l0n3m4n / Shellcode Generator / v1.2
 
-usage: bin2shell.py [-h] -bin BIN [-c C] [-cpp CPP] [-cs CS] [-asm ASM]
+usage: bin2shell.py [-h] -bin BIN [-c C] [-cpp CPP] [-cs CS] [-asm ASM] [-bof BOF]
 
 Shellcode Generator (C,C#,CPP,ASM)
 

@@ -98,7 +98,7 @@ byte[] shellcode = new byte[] {0x31,0xdb,0xf7,0xe3,0x53,0x43,0x53,0x6a,0x02,0x89
 
 Saved C# formatted shellcode to shell.txt
 ```
-### Binary BOF loader to shellcode 
+### BOF loader to shellcode 
 ```bash
 $ python3 bin2shell.py -bin shellcode.bin -bof shell.txt
 

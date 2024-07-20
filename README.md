@@ -16,10 +16,6 @@
     </a>
     <a href="https://www.python.org/">
     <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
-    </a>
-    <a href="https://www.kali.org/">
-    <img src="https://img.shields.io/badge/Kali-268BEE?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Kali">      
-    </a>
 </p>
 <br>
 

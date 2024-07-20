@@ -29,7 +29,6 @@ A small script that generate shellcode from various low level languages.
 📚 Table of Contents
 - 📜 [Description](#-description)
 - ⚙️ [Help](#-help)
-- 📌 [Author](#-author)
 - 👨🏾‍⚖️ [License](#-license)
 
 ## ⚙️ Help
@@ -223,11 +222,6 @@ shellcode:
 
 Saved ASM formatted shellcode to shell.txt
 ``` 
-## 📌 Author
-- [Facebook](https://facebook.com/l0n3m4n)
-- [Twitter (X)](https://twitter.com/l0n3m4n)
-- [Medium](https://medium.com/l0n3m4n)
-- [Website](https://l0n3m4n.github.io)
-
+ 
 ## 👨🏾‍⚖️ License
-This project is under terms of the [MIT License](LICENSE). For fixing Bugs, create [issue](https://github.com/l0n3m4n/bin2shell/issues/new)
+This project is under terms of the [MIT License](LICENSE). bugs and error's, create [issue](https://github.com/l0n3m4n/bin2shell/issues/new)

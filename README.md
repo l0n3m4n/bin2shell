@@ -36,20 +36,21 @@ python3 bin2shell.py -h
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-      Author: @l0n3m4n / Shellcode Generator / v1.2
+      Author: @l0n3m4n / Payload Converter / v1.4
 
-usage: bin2shell.py [-h] -bin BIN [-c C] [-cpp CPP] [-cs CS] [-asm ASM] [-bof BOF]
+usage: bin2shell.py [-h] -bin BIN [-c C] [-cpp CPP] [-cs CS] [-asm ASM] [-bof BOF] [-psb64 PSB64]
 
-Shellcode Generator (C,C#,CPP,ASM)
+Binary to shellcode and payload converter
 
 options:
-  -h, --help  show this help message and exit
-  -bin  BIN   Input shellcode binary file
-  -c    C     Convert binart into C raw shellcode
-  -cpp  CPP   Convert binary into CPP raw shellcode
-  -cs   CS    Convert binary into C# raw shellcode
-  -asm  ASM   Convert binary into (NASM) raw shellcode
-  -bof  BOF   Convert cobalt strike BOF into raw shellcode
+  -h, --help    show this help message and exit
+  -bin  BIN     Input shellcode binary file
+  -c    C       Convert binart into C raw shellcode
+  -cpp  CPP     Convert binary into CPP raw shellcode
+  -cs   CS      Convert binary into C# raw shellcode
+  -asm  ASM     Convert binary into (NASM) raw shellcode
+  -bof BOF      Convert BOF into raw shellcode (ex: -bof bof.x64.o)
+  -psb64 PSB64  Convert powershell to base64 (ex: -psb64 test.ps1)
 
 Example usage: python3 bin2shell.py -bin shellcode.bin -c shellcode_c.txt
 ```
@@ -63,7 +64,7 @@ $ python3 bin2shell.py -bin shellcode.bin -c shellcode_c.txt
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-      Author: @l0n3m4n / Shellcode Generator / v1.2
+      Author: @l0n3m4n / Payload Converter / v1.4
 
 
 Formatted C Shellcode:
@@ -85,7 +86,7 @@ $ python3 bin2shell.py -bin shellcode.bin -cpp shell.txt
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-       Author: @l0n3m4n / Shellcode Generator / v1.2 
+       Author: @l0n3m4n / Payload Converter / v1.4 
 
 Formatted C++ Shellcode:
 
@@ -102,7 +103,7 @@ $ python3 bin2shell.py -bin shellcode.bin -cs shell.txt
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-       Author: @l0n3m4n / Shellcode Generator / v1.2 
+       Author: @l0n3m4n / Payload Converter / v1.4 
 
 Formatted C# Shellcode:
 
@@ -119,7 +120,7 @@ $ python3 bin2shell.py -bin shellcode.bin -bof shell.txt
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-       Author: @l0n3m4n / Shellcode Generator / v1.2 
+       Author: @l0n3m4n / Payload Converter / v1.4 
 
 Formatted BOF Loader Shellcode:
 
@@ -136,7 +137,7 @@ $ python3 bin2shell.py -bin shellcode.bin -asm shell.txt
   | .-. ',--.|      \ .-' .'(  .-' |  .-.  || .-. :|  ||  | 
   | `-' ||  ||  ||  |/   '-..-'  `)|  | |  |\   --.|  ||  | 
    `---' `--'`--''--''-----'`----' `--' `--' `----'`--'`--' 
-       Author: @l0n3m4n / Shellcode Generator / v1.2 
+       Author: @l0n3m4n / Payload Converter / v1.4
 
 Formatted ASM Shellcode:
 
